@@ -35,6 +35,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     pretraining = not args.no_pretraining
+    log_dir = args.name
     create_folder(args.name)
     config_f = open(os.path.join(log_dir, 'config.json'), 'w')
     json.dump(vars(args), config_f)
