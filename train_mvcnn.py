@@ -7,7 +7,7 @@ import argparse
 
 from tools.Trainer import ModelNetTrainer
 from tools.ImgDataset import MultiviewImgDataset, SingleImgDataset
-from models.MVCNN import MVCNN,SVCNN
+from models.MVCNN import MVCNN, SVCNN
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-name", "--name", type=str, help="Name of the experiment", default="MVCNN")
@@ -35,14 +35,13 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     pretraining = not args.no_pretraining
-    log_dir = 'mvcnn/'+args.name
-    create_folder(log_dir)
+    create_folder(args.name)
     config_f = open(os.path.join(log_dir, 'config.json'), 'w')
     json.dump(vars(args), config_f)
     config_f.close()
 
     # STAGE 1
-    log_dir = 'mvcnn/'+args.name+'_stage_1'
+    log_dir = args.name+'_stage_1'
     create_folder(log_dir)
     cnet = SVCNN(args.name, nclasses=40, pretraining=pretraining, cnn_name=args.cnn_name)
 
@@ -61,7 +60,7 @@ if __name__ == '__main__':
     trainer.train(30)
 
     # STAGE 2
-    log_dir = 'mvcnn/'+args.name+'_stage_2'
+    log_dir = args.name+'_stage_2'
     create_folder(log_dir)
     cnet_2 = MVCNN(args.name, cnet, nclasses=40, cnn_name=args.cnn_name, num_views=args.num_views)
     del cnet
