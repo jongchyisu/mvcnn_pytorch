@@ -13,6 +13,8 @@ Command for training:
 [Project webpage](https://people.cs.umass.edu/~jcsu/papers/shape_recog/)  
 [Depth Images (1.5GB)](http://supermoe.cs.umass.edu/shape_recog/depth_images.tar.gz)  
 
+[Blender script for rendering shaded images](http://people.cs.umass.edu/~jcsu/papers/shape_recog/render_shaded_black_bg.blend)  
+[Blender script for rendering depth images](http://people.cs.umass.edu/~jcsu/papers/shape_recog/render_depth.blend)  
 
 ## Reference
 **A Deeper Look at 3D Shape Classifiers**  
