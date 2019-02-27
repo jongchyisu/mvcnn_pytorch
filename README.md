@@ -18,7 +18,7 @@ Command for training:
 
 ## Reference
 **A Deeper Look at 3D Shape Classifiers**  
-Jong-Chyi Su, Matheus Gahelda, Rui Wang, and Subhransu Maji  
+Jong-Chyi Su, Matheus Gadelha, Rui Wang, and Subhransu Maji  
 *Second Workshop on 3D Reconstruction Meets Semantics, ECCV, 2018*
 
 **Multi-view Convolutional Neural Networks for 3D Shape Recognition**  
